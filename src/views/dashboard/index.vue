@@ -1,30 +1,22 @@
 <template>
-  <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+  <div class="map-page">
+    <Map/>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
+import Map from "./map.vue"
 export default {
   name: 'Dashboard',
-  computed: {
-    ...mapGetters([
-      'name'
-    ])
+  components:{
+    Map
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.dashboard {
-  &-container {
-    margin: 30px;
-  }
-  &-text {
-    font-size: 30px;
-    line-height: 46px;
-  }
+ .map-page {
+  height: 695.6px;
+  width: 100%;
 }
 </style>
